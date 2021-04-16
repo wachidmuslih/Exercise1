@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.SearchView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener, ListViewAdapter.ContactsAdapterListener {
 
@@ -28,23 +29,21 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     private LinearLayoutManager mLayoutManager;
     private ListViewAdapter mAdapter;
     private ArrayList<Kontak> listNama;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<Kontak> daftarNama = new ArrayList<>();
-        for (Kontak k : DaftarKontak) {
-            daftarNama.add(k);
-        }
-        mRecyclerView = findViewById(R.id.recylcleVIew);
+        listNama = new ArrayList<>();
+       this.listNama.addAll(Arrays.asList(DaftarKontak));
+
+        mRecyclerView = findViewById(R.id.recyclerView);
 
 
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mAdapter = new ListViewAdapter(getApplicationContext(), daftarNama , this);
+        mAdapter = new ListViewAdapter(getApplicationContext(), this.listNama , this);
         mRecyclerView.setAdapter(mAdapter);
 
         searchView = findViewById(R.id.searchView);

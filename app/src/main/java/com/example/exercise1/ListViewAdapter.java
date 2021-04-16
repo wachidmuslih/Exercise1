@@ -35,7 +35,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.MyView
 
         public MyViewHolder(View view) {
             super(view);
-            name = view.findViewById(R.id.textView);
+            name = view.findViewById(R.id.nama);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -106,6 +106,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.MyView
 
     @Override
     public int getItemCount() {
+        if (contactListFiltered == null){
+             return 0;
+        }
         return contactListFiltered.size();
     }
 
@@ -121,8 +124,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.MyView
                     List<Kontak> filteredList = new ArrayList<>();
                     for (Kontak row : contactList) {
 
-                        // name match condition. this might differ depending on your requirement
-                        // here we are looking for name or phone number match
                         if (row.getNama().toLowerCase().contains(charString.toLowerCase())) {
                             filteredList.add(row);
                         }
