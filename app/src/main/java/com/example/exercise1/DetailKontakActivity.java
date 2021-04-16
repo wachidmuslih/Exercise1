@@ -13,5 +13,10 @@ public class DetailKontakActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_kontak);
 
         tvNama = findViewById(R.id.tvNama);
+        tvNomor = findViewById(R.id.tvNomor);
+
+        Bundle b = getIntent().getExtras();
+        tvNama.setText(b.getString("nama", "tanpa nama"));
+        tvNomor.setText(b.getString("nomor", "-"));
     }
 }

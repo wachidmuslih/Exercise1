@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             new Kontak("Fauzan", "081612190123"),
             new Kontak("Wachid", "081221234112"),
             new Kontak("Andy", "0815378681276"),
+            new Kontak("nina", null),
     };
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;

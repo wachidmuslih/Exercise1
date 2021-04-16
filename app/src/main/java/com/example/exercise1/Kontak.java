@@ -6,8 +6,8 @@ public class Kontak {
 
     public Kontak(String nama, String nomor)
     {
-        nama = Nama;
-        nomor = nomor;
+        Nama = nama;
+        Nomor = nomor;
     }
 
     public String getNama() {
