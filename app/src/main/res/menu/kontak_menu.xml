@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnLihatData"
+        android:title="@string/lihatData" />
+    <item
+        android:id="@+id/mnLiatNomor"
+        android:title="@string/lihatNomor" />
+</menu>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Exercise1</string>
+    <string name="login">Login</string>
+    <string name="register">Belum Terdaftar?</string>
+    <string name="email">Email</string>
+    <string name="inputEmail">Masukkan Email</string>
+    <string name="password">Password</string>
+    <string name="inputPwd">Masukkan Password</string>
+    <string name="lihatNomor">Lihat Nomor</string>
+    <string name="lihatData">Lihat Data</string>
+    <string name="nama">Nama</string>
+    <string name="nomor">Nomor</string>
+    <string name="detailKontak">Detail Kontak</string>
+
+</resources>
